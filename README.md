@@ -17,7 +17,7 @@ The TIA-MC-1 was developed in Vinnytsia, Ukraine by the Ekstrema-Ukraina company
 - Конёк-Горбунок (Konek-Gorbunok, The Humpbacked Horse by Pyotr Pavlovich Yershov)
 - Кот-рыболов (Kot-Rybolov, Cat the fisher)
 - Биллиард (Billiard, a pool-like game)
-- Городки (Gorodki, Cities - old Russian ызщке street game)
+- Городки (Gorodki, Cities - old Russian sport street game)
 - S.O.S.
 
 #### lost
