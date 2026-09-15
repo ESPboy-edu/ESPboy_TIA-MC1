@@ -70,6 +70,8 @@ void loop() {
 }
 
 void drawMenuFull() {
+    while (myESPboy.getKeys()){delay(300);}
+    delay(300);
     myESPboy.tft.fillScreen(TFT_BLACK);
     myESPboy.tft.setTextColor(TFT_YELLOW);
     myESPboy.tft.setTextSize(1);
