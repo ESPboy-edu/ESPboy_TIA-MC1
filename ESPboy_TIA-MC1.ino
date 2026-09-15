@@ -12,7 +12,7 @@
 #include "lib/ESPboyOTA2.cpp"
 */
 
-
+ 
 // 20 КБ ОЗУ (достаточно для TIA-88 и TIA-91)
 uint8_t *shared_ram;
 uint16_t *line_buffer1;
@@ -70,14 +70,11 @@ void loop() {
 }
 
 void drawMenuFull() {
-    while (myESPboy.getKeys()) {delay(300);}
-    delay(300);
     myESPboy.tft.fillScreen(TFT_BLACK);
     myESPboy.tft.setTextColor(TFT_YELLOW);
     myESPboy.tft.setTextSize(1);
-    myESPboy.tft.drawString("TIA ARCADE EMULATOR", 5, 5);
+    myESPboy.tft.drawString(F("TIA ARCADE EMULATOR"), 5, 5);
     myESPboy.tft.drawLine(0, 15, 128, 15, TFT_BLUE);
-
     myESPboy.tft.setTextColor(TFT_WHITE);
     for (int i = 0; i < NUM_GAMES; i++) {
         drawMenuItem(i, i == selected_game_index);
@@ -127,6 +124,23 @@ void handleMenu() {
 
         if (keys & PAD_ACT) {
             myESPboy.tft.fillScreen(TFT_BLACK);
+            myESPboy.tft.setTextColor(TFT_YELLOW);
+            
+            // Обернули все строки подсказки в F()
+            myESPboy.tft.drawString(F("After the game starts"), 0, 35);
+            myESPboy.tft.drawString(F("drop a coin"), 0, 45);
+            myESPboy.tft.drawString(F("by pressing"), 0, 55);
+            
+            myESPboy.tft.setTextColor(TFT_RED);
+            myESPboy.tft.drawString(F("the LFT button"), 0, 65);
+            
+            myESPboy.tft.setTextColor(TFT_YELLOW);
+            myESPboy.tft.drawString(F("to begin playing"), 0, 75);
+            
+            delay(3000); 
+            
+            myESPboy.tft.fillScreen(TFT_BLACK); 
+
             load_game(selected_game_index); 
             in_menu = false;
         }
