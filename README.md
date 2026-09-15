@@ -12,7 +12,7 @@ The TIA-MC-1 was developed in Vinnytsia, Ukraine by the Ekstrema-Ukraina company
 
 ### Some of the TIA-MC-1 based games are:
 
-#### in game
+#### included
 - Снежная королева (Snezhnaja koroleva, The Snow Queen by Hans Christian Andersen)
 - Конёк-Горбунок (Konek-Gorbunok, The Humpbacked Horse by Pyotr Pavlovich Yershov)
 - Кот-рыболов (Kot-Rybolov, Cat the fisher)
